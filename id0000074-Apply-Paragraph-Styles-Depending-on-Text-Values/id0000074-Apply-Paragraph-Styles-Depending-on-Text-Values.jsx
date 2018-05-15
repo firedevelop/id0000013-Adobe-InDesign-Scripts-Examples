@@ -1,3 +1,7 @@
+// The Script apply paragraph styles based in the text options. For example if your text are in bold, the script will apply the Paragraph Quotation Bold.
+// It is a easy way to typeset long documents with your custom styles.
+// Files to download: https://github.com/firedevelop/id0000013-Adobe-InDesign-Scripts-Examples/tree/master/id0000074-Apply-Paragraph-Styles-Depending-on-Text-Values
+// Thanks to the author: Loic.Aigon from Adobe Forums
 //MAIN FUNCTION          
 var main = function() {            
     //VARS          
