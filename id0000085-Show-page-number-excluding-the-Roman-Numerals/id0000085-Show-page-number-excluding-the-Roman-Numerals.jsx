@@ -12,7 +12,7 @@ $.writeln( n +"\t"+firstPageOfSectionPositionInDocument );
 //$.writeln( n +"\t"+firstPageName );    
 //$.writeln( n +"\t"+pageNumberStyle.toString() ); 
 if (firstPageOfSectionPositionInDocument != 0){
-    alert ("The second section has the page number: "+firstPageOfSectionPositionInDocument+1);
+    alert (firstPageOfSectionPositionInDocument+1);
 
 } else{};
 }  
