@@ -1,17 +1,18 @@
-﻿var myDoc = app.activeDocument,       
-arrayRomanNumerals = ["1"],  
-I = arrayRomanNumerals.length,  i;       
-app.findTextPreferences = null;     
-for ( i = 0; i < I; i++) {         
-    app.findTextPreferences.findWhat = arrayRomanNumerals[i];         
-    myFound = myDoc.findText();       
-    var J = myFound.length,  j;  
-    var styleBookPageNumber = myDoc.paragraphStyleGroups.itemByName("VARIOUS").paragraphStyles.itemByName("Book Page Number");  
-    for ( j = 0; j < J; j++) {     
-        myFound[j].appliedCharacterStyle = myDoc.characterStyles[0];     
-        if (myFound[j].appliedParagraphStyle == styleBookPageNumber) {   
-            parentPage = myFound[j].parentPage;  
-            RealNumberPage = parentPage && parentPage.documentOffset; 
-            alert("The real first page, excluding the Roman Numerals is: " + RealNumberPage);  
-        }  
-        else{}}}  
+﻿var sections = app.documents[0].sections.everyItem().getElements();  
+  
+for( var n=0;n<sections.length;n++ )  
+{  
+var firstPageInSection = sections[n].pageStart;  
+var firstPageOfSectionPositionInDocument = firstPageInSection.documentOffset;  
+//var firstPageName = firstPageInSection.name;  
+
+//var pageNumberStyle = sections[n].pageNumberStyle;  
+
+$.writeln( n +"\t"+firstPageOfSectionPositionInDocument );
+//$.writeln( n +"\t"+firstPageName );    
+//$.writeln( n +"\t"+pageNumberStyle.toString() ); 
+if (firstPageOfSectionPositionInDocument != 0){
+    alert ("The second section has the page number: "+firstPageOfSectionPositionInDocument+1);
+
+} else{};
+}  
