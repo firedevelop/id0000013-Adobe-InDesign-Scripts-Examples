@@ -1,4 +1,5 @@
 // https://forums.adobe.com/message/9004008#9004008
+
 app.findTextPreferences = app.changeTextPreferences = null;  
 app.findTextPreferences.findWhat = "Article 1.";  
 app.changeTextPreferences.changeTo = "Article ONE.";  
