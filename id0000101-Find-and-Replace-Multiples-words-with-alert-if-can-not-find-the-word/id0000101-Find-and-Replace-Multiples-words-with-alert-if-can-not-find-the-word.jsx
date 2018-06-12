@@ -11,7 +11,7 @@ function replaceTextUsingFIND (input, output)
     var changedResults = app.activeDocument.changeText();    
     app.findTextPreferences = app.changeTextPreferences = NothingEnum.nothing;     
 
-    if ( changedResults == 0)  { 
+    if ( changedResults.length === 0)  { 
         alert ( "No results for " + input);
     }  
 }
