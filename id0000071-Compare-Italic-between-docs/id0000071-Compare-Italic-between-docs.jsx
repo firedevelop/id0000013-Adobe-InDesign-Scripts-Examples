@@ -54,7 +54,7 @@ for ( var i = 0; i < numberOfWords; i++)
     // as we are only looking for italics  
     if ( currentDoc1FontStyle === "Italic")  
     {  
-        if ( ! ( ( currentDoc1Contents === currentDoc2Contents ) && ( currentDoc1FontStyle === currentDoc2FontStyle)))  
+        if ( ! ( ( currentDoc1Word === currentDoc2Word ) && ( currentDoc1FontStyle === currentDoc2FontStyle)))  
         {  
             if (previousString !== undefined){  
                 alert ( "Unmatched italics in: " + previousString.contents + " " + currentDoc1Contents + " " + nextString.contents); // report a fail in whichever makes most sense for you.  
