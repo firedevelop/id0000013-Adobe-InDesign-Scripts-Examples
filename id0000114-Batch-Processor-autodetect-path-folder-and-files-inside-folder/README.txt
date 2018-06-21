@@ -1,0 +1,2 @@
+If you have a script with a very large process, I recommend you place this large process at the end.
+If you don't do this, sometimes the execution order can be wrong. To be sure don't forget check the JavaScript Console in Adobe ExtendScript Toolkit and see all your scripts was executed in order.
