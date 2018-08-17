@@ -11,7 +11,7 @@
             index.topics[idx].name = index.topics[idx].name.replace(/ *^wisdom$/, 'sabiduría');
             index.topics[idx].name = index.topics[idx].name.replace(/ *^wisdom realizing knowledge$/, 'sabiduría que realiza el conocimiento');
             index.topics[idx].name = index.topics[idx].name.replace(/ *^realizing knowledge$/, 'que realiza el conocimiento');
-            index.topics[idx].name = index.topics[idx].name.replace(/ *^knowledge$/, 'vacuidad');
+            index.topics[idx].name = index.topics[idx].name.replace(/ *^knowledge$/, 'conocimiento');
         }  
     }  
       
