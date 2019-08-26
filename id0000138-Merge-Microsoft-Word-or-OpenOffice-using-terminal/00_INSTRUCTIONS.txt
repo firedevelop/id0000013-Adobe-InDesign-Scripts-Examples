@@ -47,3 +47,12 @@ brew update && brew upgrade brew-cask
 
 Now install libreoffice:
 brew cask install libreoffice
+
+
+
+6. Run the script in your terminal:
+sh 00_script.sh
+
+
+
+enjoy!
