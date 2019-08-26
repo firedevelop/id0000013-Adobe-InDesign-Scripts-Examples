@@ -1,0 +1,49 @@
+# https://askubuntu.com/questions/482277/how-to-merge-odt-documents-from-the-command-line
+# https://github.com/Homebrew/homebrew-cask/issues/5328
+# https://ask.libreoffice.org/en/question/2641/convert-to-command-line-parameter/
+# https://forum.openoffice.org/en/forum/viewtopic.php?f=7&t=57972
+
+# INSTRUCTIONS:
+
+
+1.  Be sure you have python 3 installed.
+try the next command line: 
+python3 --version
+
+
+
+2.  Be sure you have python 2.7 installed.
+try the next command line: 
+python --version
+
+
+
+3.  Be sure you have python 3 installed in the path /usr/local/bin/python3 (if not you can change your custom path in the script)
+try the next command line: 
+which python3
+
+
+
+4.  Install ooopy library:
+We will use ooopy library to merge files.
+Download and install ooopy, from here:
+https://sourceforge.net/projects/ooopy/
+
+unzip de folder, go inside, and type in terminal:
+sudo python setup.py install
+
+If you are a Mac user, you cannot install ooopy, because this libray need create a folder called "share" into the path:
+/System/Library/Frameworks/Python.framework/Versions/2.7/
+To fix this issue, simple you need disable the "System Integrity Protection" (check how to do in internet is easy using the command csrutil disable), after install ooopy you can enable again
+
+
+
+5. Install libreoffice:
+You need to have installed brew. If not, you can visit the official website to install brew:
+https://brew.sh/
+
+If you have already installed brew, update  brew. Type in terminal:
+brew update && brew upgrade brew-cask
+
+Now install libreoffice:
+brew cask install libreoffice
