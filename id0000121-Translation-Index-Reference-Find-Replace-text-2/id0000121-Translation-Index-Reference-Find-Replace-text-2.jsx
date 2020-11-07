@@ -1,15 +1,37 @@
 var myTerms = [
-              ['wisdom' , 'sabiduría'],  
-              ['wisdom realizing knowledge' , 'sabiduría que realiza el conocimiento'],  
-              ['realizing knowledge' , 'que realiza el conocimiento'],  
-              ['knowledge' , 'conocimiento'] 
+    
+    ['text','translation'],
+    ['text text\(s\)','translation translation\(s\)'],
+    ['text\’s','translation\’s'],
+    ['text\, text','translation\, translation'],
+    ['text\-text','translation\-translation'],
+    ['text ö','translation ö'],
+    ['text \& text','translation \& translation']
+
 ];
 var doc = app.activeDocument;
 for (var i=0; i<doc.indexes.length; i++) {  
         renameTopics(doc.indexes[i]);  
     } // for  
-alert("Done!\n Sometimes with a large translations, is recomend run the script more than 3 times to be sure all words are translated.");
+
 function renameTopics(myIndex)
+{
+	var j;
+	var tp = myIndex.topics.everyItem().getElements()
+	for (var idx = 0; idx < tp.length; idx++) {
+		if( myTest(tp[idx]) ) {
+			renameTopics(tp[idx]); 
+		}
+       
+	   j=translateIt(tp[idx].name+"", myTerms);
+	   if(j != null)
+	   {
+		   tp[idx].name = j;
+	   }
+   } //for    
+}
+
+/* function renameTopics(myIndex)
 {
 var j;   
    for (var idx = 0; idx < myIndex.topics.length; idx++) {
@@ -21,7 +43,7 @@ var j;
            myIndex.topics[idx].name = j;
        }
    } //for    
-}// fnc
+}// fnc */
 
 function translateIt(myStr, myArr)
 {
