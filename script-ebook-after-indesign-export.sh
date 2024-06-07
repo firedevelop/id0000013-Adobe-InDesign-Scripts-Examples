@@ -92,8 +92,31 @@ specific_files=(
 )
 declare -A specific_replacements=(
          ["ePub.xhtml#_idParaDest-1"]="cover.xhtml"
-    ["my string 1"]="my new string 1"
-    ["my string 2"]="my new string 2"
+    ["EL PRECIOSO VALOR DE NUESTRA VIDA HUMANA"]="El precioso valor de nuestra vida humana"
+    ["¿QUÉ ES LA MUERTE"]="¿Qué es la muerte"
+    ["EL PELIGRO DE RENACER EN LOS REINOS INFERIORES"]="El peligro de renacer en los reinos inferiores"
+    ["REFUGIO"]="Refugio"
+    ["¿QUÉ ES EL KARMA"]="¿Qué es el karma"
+    ["LO QUE HAY QUE SABER"]="Lo que hay que saber"
+    ["LO QUE HAY QUE ABANDONAR"]="Lo que hay que abandonar"
+    ["LO QUE HAY QUE PRACTICAR"]="Lo que hay que practicar"
+    ["LO QUE HAY QUE ALCANZAR"]="Lo que hay que alcanzar"
+    ["ADIESTRAMIENTO EN EL AMOR AFECTIVO"]="Adiestramiento en el amor afectivo"
+    ["ADIESTRAMIENTO EN EL AMOR QUE ESTIMA A LOS DEMÁS"]="Adiestramiento en el amor que estima a los demás"
+    ["ADIESTRAMIENTO EN EL AMOR QUE DESEA LA FELICIDAD DE LOS DEMÁS"]="Adiestramiento en el amor que desea la felicidad de los demás"
+    ["ADIESTRAMIENTO EN LA COMPASIÓN UNIVERSAL"]="Adiestramiento en la compasión universal"
+    ["ADIESTRAMIENTO EN LA BODHICHITA EN SÍ"]="Adiestramiento en la bodhichita en sí"
+    ["ADIESTRAMIENTO EN LAS SEIS PERFECCIONES"]="Adiestramiento en las seis perfecciones"
+    ["ADIESTRAMIENTO EN LA PRÁCTICA DE TOMAR JUNTO CON LAS SEIS PERFECCIONES"]="Adiestramiento en la práctica de tomar junto con las seis perfecciones"
+    ["ADIESTRAMIENTO EN LA PRÁCTICA DE DAR JUNTO CON LAS SEIS PERFECCIONES"]="Adiestramiento en la práctica de dar junto con las seis perfecciones"
+    ["Apéndice 1"]="Apéndice 1 – Texto raíz: Sutra de la esencia de la sabiduría. Sutra del corazón"
+    ["Apéndice 2"]="Apéndice 2 – Significado conciso del comentario"
+    ["Apéndice 3"]="Apéndice 3 – Oración liberadora y Oraciones para meditar"
+    ["Apéndice 4"]="Apéndice 4 – Los doce generadores, los dieciocho elementos y los doce vínculos de relación dependiente"
+    ["Apéndice 5"]="Apéndice 5 – La Gran Madre: Método para eliminar dificultades y obstáculos con la recitación del Sutra"
+    ["Apéndice 6"]="Apéndice 6 – Breve comentario a la práctica de La Gran Madre"
+    ["Apéndice 7"]="Apéndice 7 – El yoga de la Gran Madre Prajnaparamita: Sadhana de autogeneración"
+    ["Apéndice 8"]="Apéndice 8 – Breve comentario a El yoga de la Gran Madre Prajnaparamita: Sadhana de autogeneración"
 )
 
 
@@ -101,74 +124,8 @@ declare -A specific_replacements=(
 # Perform specific replacements
 perform_specific_replacements specific_files[@] specific_replacements
 
-echo "############### END 3.1 REPLACEMENTS TABLE CONTENTS ##################################";
 
-# Function to perform replacements in general files
-perform_general_replacements() {
-    local files=("${!1}")
-    declare -n replacements=$2  # Create a reference to the replacements array
 
-    for file_pattern in "${files[@]}"; do
-        for file in $file_pattern; do
-            if [[ -f "$file" ]]; then
-                # Exclude the file in ilustrations_XHTML
-                if [[ "$file" == "$ilustrations_XHTML" ]]; then
-                    echo "Skipping file: $file"
-                    continue
-                fi
-                for search_string in "${!replacements[@]}"; do
-                    replace_string=${replacements[$search_string]}
-                    echo "Processing file: $file"
-                    echo "Replacing occurrences of '$search_string*'"
-                    # Use sed with a regex to match and remove the entire string starting with search_string, accounting for leading spaces
-                    sed -i "s| *${search_string}[^<]*|${replace_string}|g" "$file"
-                done
-            else
-                echo "No files found for pattern $file_pattern"
-            fi
-        done
-    done
-}
-
-# Function to remove the string "9788459822435-" from the file stored in ilustrations_XHTML
-remove_ilustrations_string() {
-    if [[ -f "$ilustrations_XHTML" ]]; then
-        echo "Processing file: $ilustrations_XHTML"
-        # Use sed with a regex to remove the string "9788459822435-" while preserving the rest of the text and HTML tags
-        sed -i "s|\( *\)9788459822435-\(.*\)|\1\2|g" "$ilustrations_XHTML"
-    else
-        echo "File not found: $ilustrations_XHTML"
-    fi
-}
-
-# Search for file containing the string "9788459822435-" more than 3 times
-ilustrations_XHTML=""
-for file in ./ePub/OEBPS/*.xhtml; do
-    if [[ -f "$file" ]]; then
-        count=$(grep -o "9788459822435-" "$file" | wc -l)
-        if (( count > 3 )); then
-            ilustrations_XHTML="$file"
-            echo "File with more than 3 occurrences of '9788459822435-': $file"
-            break
-        fi
-    fi
-done
-
-# General files and replacements
-general_files=(
-    "./ePub/OEBPS/*.xhtml"
-)
-declare -A general_replacements=(
-    ["9788459822435-"]=""
-)
-
-# Perform general replacements
-perform_general_replacements general_files[@] general_replacements
-
-# Remove "9788459822435-" string from ilustrations_XHTML file
-remove_ilustrations_string
-
-echo "Replacement complete."
 
 
 echo "############### 3.2 REPLACEMENTS ILUSTRATIONS ##################################";
@@ -246,9 +203,6 @@ remove_ilustrations_string
 echo "Replacement complete."
 
 
-
-
-echo "############### END 3.2 REPLACEMENTS ILUSTRATIONS ##################################";
 
 
 
@@ -1394,3 +1348,4 @@ sudo chown -Rv $USER ./ePub
 chmod -R 777 ./ePub
 echo "############### END 12. UNZIP DE EPUB #######################################################";
 
+echo "OM AH HUM";
