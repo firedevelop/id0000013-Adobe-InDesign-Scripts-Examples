@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# /mnt/c/Users/production/Documents/
 ############### TABLE OF CONTENT #####################
 #               1. UNZIP EPUB
 #               2. DELETE LINES AFTER FIND STRING
@@ -58,7 +58,7 @@ echo "############### 3. CUSTOM CODE ###########################################
 # Custom code
 perl -pi -w -e 's!  !&#160;&#160;!g;' ./ePub/OEBPS/*.xhtml
 
-echo "############### 3.1 REPLACE STRINGS #######################################################";
+echo "############### 3.1 REPLACEMENTS TABLE CONTENTS ##################################";
 # Function to perform replacements in specific files
 perform_specific_replacements() {
     local files=("${!1}")
@@ -85,6 +85,24 @@ perform_specific_replacements() {
     done
 }
 
+# Specific files and replacements
+specific_files=(
+    "./ePub/OEBPS/toc.ncx"
+    "./ePub/OEBPS/toc.xhtml"
+)
+declare -A specific_replacements=(
+         ["ePub.xhtml#_idParaDest-1"]="cover.xhtml"
+    ["my string 1"]="my new string 1"
+    ["my string 2"]="my new string 2"
+)
+
+
+
+# Perform specific replacements
+perform_specific_replacements specific_files[@] specific_replacements
+
+echo "############### END 3.1 REPLACEMENTS TABLE CONTENTS ##################################";
+
 # Function to perform replacements in general files
 perform_general_replacements() {
     local files=("${!1}")
@@ -93,13 +111,17 @@ perform_general_replacements() {
     for file_pattern in "${files[@]}"; do
         for file in $file_pattern; do
             if [[ -f "$file" ]]; then
+                # Exclude the file in ilustrations_XHTML
+                if [[ "$file" == "$ilustrations_XHTML" ]]; then
+                    echo "Skipping file: $file"
+                    continue
+                fi
                 for search_string in "${!replacements[@]}"; do
                     replace_string=${replacements[$search_string]}
                     echo "Processing file: $file"
-                    echo "Replacing '$search_string' with '$replace_string'"
-                    # Use sed with a different delimiter to avoid special character issues
-                    sed -i "s|$search_string|$replace_string|g" "$file"
-                    #echo "Replaced '$search_string' with '$replace_string' in $file"
+                    echo "Replacing occurrences of '$search_string*'"
+                    # Use sed with a regex to match and remove the entire string starting with search_string, accounting for leading spaces
+                    sed -i "s| *${search_string}[^<]*|${replace_string}|g" "$file"
                 done
             else
                 echo "No files found for pattern $file_pattern"
@@ -108,40 +130,126 @@ perform_general_replacements() {
     done
 }
 
-# Specific files and replacements
-specific_files=(
-    "./ePub/OEBPS/toc.ncx"
-    "./ePub/OEBPS/toc.xhtml"
-)
-declare -A specific_replacements=(
-         ["ePub.xhtml#_idParaDest-1"]="cover.xhtml"
-    ["my_string"]="my_new string"
-    ["my_string"]="my_new string"
-    ["my_string"]="my_new string"
-    ["my_string"]="my_new string"
+# Function to remove the string "9788459822435-" from the file stored in ilustrations_XHTML
+remove_ilustrations_string() {
+    if [[ -f "$ilustrations_XHTML" ]]; then
+        echo "Processing file: $ilustrations_XHTML"
+        # Use sed with a regex to remove the string "9788459822435-" while preserving the rest of the text and HTML tags
+        sed -i "s|\( *\)9788459822435-\(.*\)|\1\2|g" "$ilustrations_XHTML"
+    else
+        echo "File not found: $ilustrations_XHTML"
+    fi
+}
 
-)
+# Search for file containing the string "9788459822435-" more than 3 times
+ilustrations_XHTML=""
+for file in ./ePub/OEBPS/*.xhtml; do
+    if [[ -f "$file" ]]; then
+        count=$(grep -o "9788459822435-" "$file" | wc -l)
+        if (( count > 3 )); then
+            ilustrations_XHTML="$file"
+            echo "File with more than 3 occurrences of '9788459822435-': $file"
+            break
+        fi
+    fi
+done
 
 # General files and replacements
 general_files=(
     "./ePub/OEBPS/*.xhtml"
 )
 declare -A general_replacements=(
-    ["9788459822435-my_images"]=""
-    ["9788459822435-my_images"]=""
+    ["9788459822435-"]=""
 )
-
-# Perform specific replacements
-perform_specific_replacements specific_files[@] specific_replacements
 
 # Perform general replacements
 perform_general_replacements general_files[@] general_replacements
+
+# Remove "9788459822435-" string from ilustrations_XHTML file
+remove_ilustrations_string
+
+echo "Replacement complete."
+
+
+echo "############### 3.2 REPLACEMENTS ILUSTRATIONS ##################################";
+# This class do the next: 
+# 1. Find the ilustration page by search the xhtml with more than 3 times "9788459822435-" and save the filename.xhtml in the variable ilustrations_XHTML
+# 2. Remove full paragraph text contains a strings with "9788459822435-" except the Ilustration page, ilustrations_XHTML. Only change text and keep the HTML code. Also remove the strings with white spaces at start like " 9788459822435-", "  9788459822435-"
+# 3. Go to ilustrations_XHTML and remove the string 9788459822435- but keep the rest of the text, because we need to show the title ilustration. Also keep the HTML tags.
+
+
+# Function to perform replacements in general files
+perform_general_replacements() {
+    local files=("${!1}")
+    declare -n replacements=$2  # Create a reference to the replacements array
+
+    for file_pattern in "${files[@]}"; do
+        for file in $file_pattern; do
+            if [[ -f "$file" ]]; then
+                # Exclude the file in ilustrations_XHTML
+                if [[ "$file" == "$ilustrations_XHTML" ]]; then
+                    echo "Skipping file: $file"
+                    continue
+                fi
+                for search_string in "${!replacements[@]}"; do
+                    replace_string=${replacements[$search_string]}
+                    echo "Processing file: $file"
+                    echo "Replacing occurrences of '$search_string*'"
+                    # Use sed with a regex to match and remove the entire string starting with search_string, accounting for leading spaces
+                    sed -i "s| *${search_string}[^<]*|${replace_string}|g" "$file"
+                done
+            else
+                echo "No files found for pattern $file_pattern"
+            fi
+        done
+    done
+}
+
+# Function to remove the string "9788459822435-" from the file stored in ilustrations_XHTML
+remove_ilustrations_string() {
+    if [[ -f "$ilustrations_XHTML" ]]; then
+        echo "Processing file: $ilustrations_XHTML"
+        # Use sed with a regex to remove the string "9788459822435-" while preserving the rest of the text and HTML tags
+        sed -i "s|\( *\)9788459822435-\(.*\)|\1\2|g" "$ilustrations_XHTML"
+    else
+        echo "File not found: $ilustrations_XHTML"
+    fi
+}
+
+# Search for file containing the string "9788459822435-" more than 3 times
+ilustrations_XHTML=""
+for file in ./ePub/OEBPS/*.xhtml; do
+    if [[ -f "$file" ]]; then
+        count=$(grep -o "9788459822435-" "$file" | wc -l)
+        if (( count > 3 )); then
+            ilustrations_XHTML="$file"
+            echo "File with more than 3 occurrences of '9788459822435-': $file"
+            break
+        fi
+    fi
+done
+
+# General files and replacements
+general_files=(
+    "./ePub/OEBPS/*.xhtml"
+)
+declare -A general_replacements=(
+    ["9788459822435-"]=""
+)
+
+# Perform general replacements
+perform_general_replacements general_files[@] general_replacements
+
+# Remove "9788459822435-" string from ilustrations_XHTML file
+remove_ilustrations_string
 
 echo "Replacement complete."
 
 
 
-echo "############### END 3.1 REPLACE STRINGS #######################################################";
+
+echo "############### END 3.2 REPLACEMENTS ILUSTRATIONS ##################################";
+
 
 
 echo "############### 3.1 ADD EXTRA CSS AND XHTML ###############################################";
@@ -1285,5 +1393,4 @@ unzip -o -q ePub.zip -d ePub/
 sudo chown -Rv $USER ./ePub
 chmod -R 777 ./ePub
 echo "############### END 12. UNZIP DE EPUB #######################################################";
-
 
