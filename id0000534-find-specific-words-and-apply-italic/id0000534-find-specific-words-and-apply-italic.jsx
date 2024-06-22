@@ -1,3 +1,4 @@
+// Italic character style will only apply on specific paragrah styles
 var myDoc = app.documents[0];
 var characterStyleItalic = myDoc.characterStyles.itemByName("Italic");
 
