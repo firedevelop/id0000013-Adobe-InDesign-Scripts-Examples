@@ -39,9 +39,11 @@ function replaceTextOnIndexLevel(paragraphStyle, findPattern, replacePattern) {
 }
 
 // Replace text using the provided GREP pattern and replace pattern for each paragraph style
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^action mantra)((.+?)$)", "action mantra $2 (véase también mantra)");
-replaceTextOnIndexLevel(IndexLevel02Roman, "(\^free)((.+?)$)", "free $2 (véase libre)");
-replaceTextOnIndexLevel(IndexLevel03Roman, "(\^cuerpo)((.+?)$)", "cuerpo $2 (véase también body)");
-replaceTextOnIndexLevel(IndexLevel04Roman, "(\^action mantra)((.+?)$)", "action mantra $2 (véase también mantra)");
+replaceTextOnIndexLevel(IndexLevel01Roman, 
+    "(\^action)((.+?)$)", 
+    "action $2 (see also actions), g");
 
-alert("Text replacement complete.");
+replaceTextOnIndexLevel(IndexLevel02Roman, 
+    "(\^actor)((.+?)$)", 
+    "actor $2 , g");
+
