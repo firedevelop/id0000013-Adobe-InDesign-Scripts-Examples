@@ -43,8 +43,12 @@ Now install libreoffice:
 apt install libreoffice
 
 
-5º COPY PASTE YOUR WORDS
+5º CLEAN OLD FILES
+execute from terminal:
+./01_STEP_clean_old_files.sh
 
+
+5º COPY PASTE YOUR WORDS
 Place all your worSd files on folder called:
 01_files_original_in_Word_format
 
@@ -57,11 +61,11 @@ to
 
 
 execute from terminal:
-sh 02_STEP_rename_underscore_to_zero.sh
+./02_STEP_rename_underscore_to_zero.sh
 
 
 7º RENAME ALL WORD FILENAMES TO 001, 002, ...
-sh 03_STEP_rename_all_words.sh
+./03_STEP_rename_all_words.sh
 
 
 8º CONVERT .DOCX TO .ODT
