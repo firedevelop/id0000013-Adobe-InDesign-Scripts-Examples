@@ -1,0 +1,1 @@
+$.writeln("Convert all Bold Italics to Character Style Italic in word.indd");

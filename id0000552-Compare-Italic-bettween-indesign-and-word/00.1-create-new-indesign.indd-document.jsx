@@ -1,0 +1,1 @@
+$.writeln("Paste in a new indesdign.indd all the content from your last version indesign and other for word.indd");
