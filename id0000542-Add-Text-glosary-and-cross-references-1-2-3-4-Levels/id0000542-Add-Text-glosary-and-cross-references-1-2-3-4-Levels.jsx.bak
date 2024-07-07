@@ -71,14 +71,14 @@ replaceTextOnIndexLevel(IndexLevel01Roman, bodhichita2 + "((?:(.+?)$\\r)*?)(\^ul
 PROTOCOL:
 1. Apply conversion or undo conversion of latin character.
 1. Verify after string are 2 white spaces \s{2}
-2. Apply italics to titles sadhanas, books and v\u00E9ase...
+2. Apply italics to titles sadhanas, books and véase...
 */
 
 var text = "(\^bodhichita  )((.+?)$\r)";
 replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^aspirante  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
 
 var text = "(\^bodhichita  )((.+?)$\r)";
-replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^\u00FAltima  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
+replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^última  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
 
 var text = "(\^bodhichita  )((.+?)$\r)";
 replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^comprometida  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
@@ -93,7 +93,7 @@ var text = "(\^gozo  )((.+?)$\r)";
 replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^no contaminados  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
 
 var text = "(\^gozo  )((.+?)$\r)";
-replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^y vacuidad  )((.+?)$)", "$0 (v\u00E9ase tambi\u00E9n uni\u00F3n del gozo y la vacuidad)"); applyParagraphStyle(IndexLevel01Roman, text);
+replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^y vacuidad  )((.+?)$)", "$0 (véase también unión del gozo y la vacuidad)"); applyParagraphStyle(IndexLevel01Roman, text);
 
 var text = "(\^Guru\\(s\\)  )((.+?)$\r)";
 replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^linaje  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
@@ -101,17 +101,17 @@ replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^linaje  )
 var text = "(\^Mahayana  )((.+?)$\r)";
 replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^caminos  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
 
-var text = "(\^meditaci\u00F3n  )((.+?)$\r)";
-replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^anal\u00EDtica  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
+var text = "(\^meditación  )((.+?)$\r)";
+replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^analítica  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
 
-var text = "(\^meditaci\u00F3n  )((.+?)$\r)";
+var text = "(\^meditación  )((.+?)$\r)";
 replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^de emplazamiento  )((.+?)$)", "$0 , g"); applyParagraphStyle(IndexLevel01Roman, text);
 
 var text = "(\^Tierra de las Dakinis  )((.+?)$\r)";
-replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^interno  )((.+?)$)", "$0 (v\u00E9ase tambi\u00E9n luz clara significactiva)"); applyParagraphStyle(IndexLevel01Roman, text);
+replaceTextOnIndexLevel(IndexLevel01Roman, text + "((?:(.+?)$\\r)*?)(\^interno  )((.+?)$)", "$0 (véase también luz clara significactiva)"); applyParagraphStyle(IndexLevel01Roman, text);
 
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^bardo)((.+?)$)", "bardo $2 (v\u00E9ase tambi\u00E9n muerte, estado intermedio y renacimiento)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^bardo)((.+?)$)", "bardo $2 (véase también muerte, estado intermedio y renacimiento)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^agregados)((.+?)$)", "agregados $2, g");
 
@@ -131,7 +131,7 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^apego)((.+?)$)", "apego $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Atisha)((.+?)$)", "Atisha $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^base de designaci\u00F3n)((.+?)$)", "base de designaci\u00F3n $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^base de designación)((.+?)$)", "base de designación $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^bendiciones)((.+?)$)", "bendiciones $2, g");
 
@@ -139,37 +139,37 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Benzarahi)((.+?)$)", "Benzarahi $
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^bodhichita)((.+?)$)", "bodhichita $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^bodhichita \u00FAltima)((.+?)$)", "bodhichita \u00FAltima $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^bodhichita última)((.+?)$)", "bodhichita última $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Bodhisatva)((.+?)$)", "Bodhisatva $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Buda)((.+?)$)", "Buda $2 (v\u00E9anse tambi\u00E9n tres joyas; Shakyamuni, Buda; familias de Buda)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Buda)((.+?)$)", "Buda $2 (véanse también tres joyas; Shakyamuni, Buda; familias de Buda)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Budadharma)((.+?)$)", "Buda $2 (v\u00E9ase tambi\u00E9n Dharma)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Budadharma)((.+?)$)", "Buda $2 (véase también Dharma)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^canales, gotas y aires)((.+?)$)", "canales, gotas y aires $2 (v\u00E9ase tambi\u00E9n canales; gotas; aires)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^canales, gotas y aires)((.+?)$)", "canales, gotas y aires $2 (véase también canales; gotas; aires)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Chakrasambara)((.+?)$)", "Chakrasambara $2 (v\u00E9ase tambi\u00E9n Heruka)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Chakrasambara)((.+?)$)", "Chakrasambara $2 (véase también Heruka)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^canales)((.+?)$)", "canales $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^cinco sabidur\u00EDas omniscientes)((.+?)$)", "cinco sabidur\u00EDas omniscientes $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^cinco sabidurías omniscientes)((.+?)$)", "cinco sabidurías omniscientes $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^concentraci\u00F3n)((.+?)$)", "concentraci\u00F3n $2 (v\u00E9ase tambi\u00E9n permanencia apacible)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^concentración)((.+?)$)", "concentración $2 (véase también permanencia apacible)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^cuerpo vajra)((.+?)$)", "cuerpo vajra $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakini externa)((.+?)$)", "Dakini externa $2 (v\u00E9ase tambi\u00E9n mensajeras)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakini externa)((.+?)$)", "Dakini externa $2 (véase también mensajeras)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakini interna)((.+?)$)", "Dakini interna $2 (v\u00E9ase tambi\u00E9n mensajeras)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakini interna)((.+?)$)", "Dakini interna $2 (véase también mensajeras)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakinis and Dakas)((.+?)$)", "Dakinis and Dakas $2 (v\u00E9ase tambi\u00E9n H\u00E9roes y Hero\u00EDnas)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakinis and Dakas)((.+?)$)", "Dakinis and Dakas $2 (véase también Héroes y Heroínas)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakini secreta)((.+?)$)", "Dakini secreta $2 (v\u00E9ase tambi\u00E9n mensajeras)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Dakini secreta)((.+?)$)", "Dakini secreta $2 (véase también mensajeras)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^enga\u00F1os perturbaciones mentales)((.+?)$)", "enga\u00F1os perturbaciones mentales $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^engaños perturbaciones mentales)((.+?)$)", "engaños perturbaciones mentales $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^demonios)((.+?)$)", "demonios $2 (v\u00E9ase tambi\u00E9n maras)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^demonios)((.+?)$)", "demonios $2 (véase también maras)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^protectores del Dharma)((.+?)$)", "protectores del Dharma $2, g");
 
@@ -177,19 +177,19 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^diez direcciones)((.+?)$)", "diez
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^dioses)((.+?)$)", "dioses $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^dormir)((.+?)$)", "dormir $2 (v\u00E9ase tambi\u00E9n yoga del dormir; signos de disoluci\u00F3n, del dormir; luz clara, del dormir)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^dormir)((.+?)$)", "dormir $2 (véase también yoga del dormir; signos de disolución, del dormir; luz clara, del dormir)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Doryhe Shugden)((.+?)$)", "Doryhe Shugden $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^el cuerpo de la Deidad)((.+?)$)", "el cuerpo de la Deidad $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^esp\u00EDritus naga)((.+?)$)", "esp\u00EDritus naga $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^espíritus naga)((.+?)$)", "espíritus naga $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^estimaci\u00F3n propia)((.+?)$)", "estimaci\u00F3n propia $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^estimación propia)((.+?)$)", "estimación propia $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^estupa)((.+?)$)", "estupa $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^etapa de generaci\u00F3n)((.+?)$)", "etapa de generaci\u00F3n $2 (v\u00E9ase tambi\u00E9n transformaciones, tres)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^etapa de generación)((.+?)$)", "etapa de generación $2 (véase también transformaciones, tres)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^etapas del camino)((.+?)$)", "etapas del camino $2, g");
 
@@ -201,33 +201,33 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gota indestructible)((.+?)$)", "g
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gotas de)((.+?)$)", "gotas de $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gotas de)((.+?)$)", "gotas de $2 (v\u00E9ase tambi\u00E9n canales, gotas y aires; gota indestructible)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gotas de)((.+?)$)", "gotas de $2 (véase también canales, gotas y aires; gota indestructible)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gozo)((.+?)$)", "gozo $2 (v\u00E9ase tambi\u00E9n luz clara de la mente; gran gozo espont\u00E1neo)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gozo)((.+?)$)", "gozo $2 (véase también luz clara de la mente; gran gozo espontáneo)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gran gozo espont\u00E1neo)((.+?)$)", "gran gozo espont\u00E1neo $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^gran gozo espontáneo)((.+?)$)", "gran gozo espontáneo $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Guhyasamaya)((.+?)$)", "Guhyasamaya $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Gu\u00EDa Espiritua)((.+?)$)", "Gu\u00EDa Espiritua $2 (v\u00E9ase tambi\u00E9n Guru; Yoga del Guru)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Guía Espiritua)((.+?)$)", "Guía Espiritua $2 (véase también Guru; Yoga del Guru)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Gu\u00EDa Espiritual vajrayana)((.+?)$)", "Gu\u00EDa Espiritual vajrayana $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Guía Espiritual vajrayana)((.+?)$)", "Guía Espiritual vajrayana $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Guru(s))((.+?)$)", "Guru(s) $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Guru(s))((.+?)$)", "Guru(s) $2 (v\u00E9ase tambi\u00E9n Yoga de Guru; Gu\u00EDa Espiritual)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Guru(s))((.+?)$)", "Guru(s) $2 (véase también Yoga de Guru; Guía Espiritual)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^H\u00E9roes y Hero\u00EDnas)((.+?)$)", "H\u00E9roes y Hero\u00EDnas $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Héroes y Heroínas)((.+?)$)", "Héroes y Heroínas $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^H\u00E9roes y Hero\u00EDnas)((.+?)$)", "H\u00E9roes y Hero\u00EDnas $2 (v\u00E9ase tambi\u00E9n Dakas y Dakinis)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Héroes y Heroínas)((.+?)$)", "Héroes y Heroínas $2 (véase también Dakas y Dakinis)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tantra del yoga supremo)((.+?)$)", "Tantra del yoga supremo $2 (v\u00E9ase tambi\u00E9n mantra secreto)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tantra del yoga supremo)((.+?)$)", "Tantra del yoga supremo $2 (véase también mantra secreto)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^hinayana)((.+?)$)", "hinayana $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^cuerpo ilusorio)((.+?)$)", "cuerpo ilusorio $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^cuerpo ilusorio)((.+?)$)", "cuerpo ilusorio $2 (v\u00E9ase tambi\u00E9n cuerpo de arco iris)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^cuerpo ilusorio)((.+?)$)", "cuerpo ilusorio $2 (véase también cuerpo de arco iris)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Ishvara)((.+?)$)", "Ishvara $2, g");
 
@@ -235,23 +235,23 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Je Phabongkhapa)((.+?)$)", "Je Ph
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Kangyur)((.+?)$)", "Kangyur $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^kapala)((.+?)$)", "kapala $2 (v\u00E9ase tambi\u00E9n cuenco de cr\u00E1neo)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^kapala)((.+?)$)", "kapala $2 (véase también cuenco de cráneo)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Khedrupyhe)((.+?)$)", "Khedrupyhe $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Lama Losang Tubwang Dorjechang)((.+?)$)", "Lama Losang Tubwang Dorjechang $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^liberaci\u00F3n)((.+?)$)", "liberaci\u00F3n $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^liberación)((.+?)$)", "liberación $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^linaje)((.+?)$)", "linaje $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Lochana)((.+?)$)", "Lochana $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Losang Yeshe)((.+?)$)", "Losang Yeshe $2 (v\u00E9ase tambi\u00E9n Triyhang Rimpoch\u00E9, Vajradhara)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Losang Yeshe)((.+?)$)", "Losang Yeshe $2 (véase también Triyhang Rimpoché, Vajradhara)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^luz clara ejempla)((.+?)$)", "luz clara ejempla $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^luz clara significativa)((.+?)$)", "luz clara significativa $2 (v\u00E9ase tambi\u00E9n Tierra de las Dakinis, interna)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^luz clara significativa)((.+?)$)", "luz clara significativa $2 (véase también Tierra de las Dakinis, interna)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Mahakaruna)((.+?)$)", "Mahakaruna $2, g");
 
@@ -259,51 +259,51 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Mahayana)((.+?)$)", "Mahayana $2,
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Mamaki)((.+?)$)", "Mamaki $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mandala)((.+?)$)", "mandala $2 (v\u00E9ase tambi\u00E9n mandala corporal; ofrecimiento del mandala)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mandala)((.+?)$)", "mandala $2 (véase también mandala corporal; ofrecimiento del mandala)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mantra)((.+?)$)", "mantra $2 (v\u00E9ase tambi\u00E9n mantra de Vajrayoguini)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mantra)((.+?)$)", "mantra $2 (véase también mantra de Vajrayoguini)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Mantra secreto)((.+?)$)", "Mantra secreto $2 (v\u00E9ase tambi\u00E9n Tantra del yoga supremo)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Mantra secreto)((.+?)$)", "Mantra secreto $2 (véase también Tantra del yoga supremo)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mara)((.+?)$)", "mara $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mara)((.+?)$)", "mara $2 (v\u00E9ase tambi\u00E9n demonio)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mara)((.+?)$)", "mara $2 (véase también demonio)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^meditaci\u00F3n)((.+?)$)", "meditaci\u00F3n $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^meditación)((.+?)$)", "meditación $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mente)((.+?)$)", "mente $2 (v\u00E9ase tambi\u00E9n mente que reside de manera cont\u00EDnua, mente primaria, mente sutil, mente muy sutil)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mente)((.+?)$)", "mente $2 (véase también mente que reside de manera contínua, mente primaria, mente sutil, mente muy sutil)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^luz clara de la mente)((.+?)$)", "luz clara de la mente $2 (v\u00E9ase tambi\u00E9n mente que reside de manera continua, luz clara significativa, mente muy sutil)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^luz clara de la mente)((.+?)$)", "luz clara de la mente $2 (véase también mente que reside de manera continua, luz clara significativa, mente muy sutil)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^m\u00E9ritos, acumulaci\u00F3n de)((.+?)$)", "m\u00E9ritos, acumulaci\u00F3n de $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^méritos, acumulación de)((.+?)$)", "méritos, acumulación de $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^m\u00E9todo)((.+?)$)", "m\u00E9todo $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^método)((.+?)$)", "método $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mudras)((.+?)$)", "mudras $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mudras)((.+?)$)", "mudras $2 (v\u00E9ase tambi\u00E9n mudra de acci\u00F3n)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^mudras)((.+?)$)", "mudras $2 (véase también mudra de acción)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Nagaryhuna)((.+?)$)", "Nagaryhuna $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^naturaleza \u00FAltima)((.+?)$)", "naturaleza \u00FAltima $2 (v\u00E9ase tambi\u00E9n vacuidad)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^naturaleza última)((.+?)$)", "naturaleza última $2 (véase también vacuidad)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^n\u00E9ctar)((.+?)$)", "n\u00E9ctar $2 (v\u00E9ase tambi\u00E9n yoga of experiencing nectar)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^néctar)((.+?)$)", "néctar $2 (véase también yoga of experiencing nectar)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^nirvana)((.+?)$)", "nirvana $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^nirvana)((.+?)$)", "nirvana $2 (v\u00E9ase tambi\u00E9n liberaci\u00F3n)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^nirvana)((.+?)$)", "nirvana $2 (véase también liberación)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^nueve permanencias mentales)((.+?)$)", "nueve permanencias mentales $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^objetos rituales)((.+?)$)", "objetos rituales $2 (v\u00E9ase tambi\u00E9n campana, damaru, mala, vajra)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^objetos rituales)((.+?)$)", "objetos rituales $2 (véase también campana, damaru, mala, vajra)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Ofrenda al Gu\u00EDa Espiritua)((.+?)$)", "Ofrenda al Gu\u00EDa Espiritua $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Ofrenda al Guía Espiritua)((.+?)$)", "Ofrenda al Guía Espiritua $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^once yogas)((.+?)$)", "once yogas $2 (v\u00E9ase tambi\u00E9n yogas individuales)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^once yogas)((.+?)$)", "once yogas $2 (véase también yogas individuales)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^paz solitaria)((.+?)$)", "paz solitaria $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^perfecci\u00F3n de la sabidur\u00EDa)((.+?)$)", "perfecci\u00F3n de la sabidur\u00EDa $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^perfección de la sabiduría)((.+?)$)", "perfección de la sabiduría $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^permanencia apacible)((.+?)$)", "permanencia apacible $2, g");
 
@@ -319,19 +319,19 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^retentiva mental/memoria)((.+?)$)
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^rueda de canales)((.+?)$)", "rueda de canales $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sabidur\u00EDa)((.+?)$)", "sabidur\u00EDa $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sabiduría)((.+?)$)", "sabiduría $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sabidur\u00EDa)((.+?)$)", "sabidur\u00EDa $2 (v\u00E9ase tambi\u00E9n cinco sabidur\u00EDas omniscientes, perfecci\u00F3n de la sabidur\u00EDa)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sabiduría)((.+?)$)", "sabiduría $2 (véase también cinco sabidurías omniscientes, perfección de la sabiduría)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sadhanas)((.+?)$)", "sadhanas $2 (v\u00E9ase tambi\u00E9n individuales)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sadhanas)((.+?)$)", "sadhanas $2 (véase también individuales)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sadhanas, Vajrayoguini)((.+?)$)", "sadhanas, Vajrayoguini $2 (v\u00E9ase tambi\u00E9n individuales)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sadhanas, Vajrayoguini)((.+?)$)", "sadhanas, Vajrayoguini $2 (véase también individuales)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^samsara)((.+?)$)", "samsara $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^seis perfecciones)((.+?)$)", "seis perfecciones $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Se\u00F1or de la Muerte)((.+?)$)", "Se\u00F1or de la Muerte $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Señor de la Muerte)((.+?)$)", "Señor de la Muerte $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^ser de compromiso)((.+?)$)", "ser de compromiso $2, g");
 
@@ -341,7 +341,7 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Ser Superior)((.+?)$)", "Ser Supe
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Shantideva)((.+?)$)", "Shantideva $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^signos de disoluci\u00F3n)((.+?)$)", "signos de disoluci\u00F3n $2 (v\u00E9ase tambi\u00E9n mentes sutiles, apariencias de las)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^signos de disolución)((.+?)$)", "signos de disolución $2 (véase también mentes sutiles, apariencias de las)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^sindhura)((.+?)$)", "sindhura $2, g");
 
@@ -349,25 +349,25 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Sukhavati)((.+?)$)", "Sukhavati $
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Sutra)((.+?)$)", "Sutra $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^tantra)((.+?)$)", "tantra $2 (v\u00E9ase tambi\u00E9n mantra secreto, tantra del yoga supremo)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^tantra)((.+?)$)", "tantra $2 (véase también mantra secreto, tantra del yoga supremo)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tantra de Heruka)((.+?)$)", "Tantra de Heruka $2 (v\u00E9ase tambi\u00E9n Tantra ra\u00EDz conciso de Heruka)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tantra de Heruka)((.+?)$)", "Tantra de Heruka $2 (véase también Tantra raíz conciso de Heruka)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tantra ra\u00EDz conciso de Heruka)((.+?)$)", "Tantra ra\u00EDz conciso de Heruka $2 (v\u00E9ase tambi\u00E9n Tantra ra\u00EDz de Heruka)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tantra raíz conciso de Heruka)((.+?)$)", "Tantra raíz conciso de Heruka $2 (véase también Tantra raíz de Heruka)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tengyur)((.+?)$)", "Tengyur $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Tushita)((.+?)$)", "Tushita $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Uni\u00F3n de No M\u00E1s Aprendizaje)((.+?)$)", "Uni\u00F3n de No M\u00E1s Aprendizaje $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Unión de No Más Aprendizaje)((.+?)$)", "Unión de No Más Aprendizaje $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^uni\u00F3n que necesita aprendizaje)((.+?)$)", "uni\u00F3n que necesita aprendizaje $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^unión que necesita aprendizaje)((.+?)$)", "unión que necesita aprendizaje $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Mahasidhas, ochenta y cuatro)((.+?)$)", "Mahasidhas, ochenta y cuatro $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^vacuidad)((.+?)$)", "vacuidad $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^vacuidad)((.+?)$)", "vacuidad $2 (v\u00E9ase tambi\u00E9n verdad \u00FAltima)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^vacuidad)((.+?)$)", "vacuidad $2 (véase también verdad última)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Vairochana)((.+?)$)", "Vairochana $2, g");
 
@@ -375,9 +375,9 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^vajra)((.+?)$)", "vajra $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Vajradhara)((.+?)$)", "Vajradhara $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Vajradhara Triyhang Rimpoch\u00E9)((.+?)$)", "Vajradhara Triyhang Rimpoch\u00E9 $2, g");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Vajradhara Triyhang Rimpoché)((.+?)$)", "Vajradhara Triyhang Rimpoché $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Vajrayana)((.+?)$)", "Vajrayana $2 (v\u00E9ase tambi\u00E9n mantra secreto, tantra del yoga supremo)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Vajrayana)((.+?)$)", "Vajrayana $2 (véase también mantra secreto, tantra del yoga supremo)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^veinticuatro lugares sagrados)((.+?)$)", "veinticuatro lugares sagrados $2, g");
 
@@ -385,13 +385,13 @@ replaceTextOnIndexLevel(IndexLevel01Roman, "(\^vigilancia mental)((.+?)$)", "vig
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^votos y compromisos)((.+?)$)", "votos y compromisos $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^aires, internos)((.+?)$)", "aires, internos $2 (v\u00E9ase tambi\u00E9n yoga de los aires)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^aires, internos)((.+?)$)", "aires, internos $2 (véase también yoga de los aires)");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Yamantaka)((.+?)$)", "Yamantaka $2, g");
 
 replaceTextOnIndexLevel(IndexLevel01Roman, "(\^Yhe Tsongkhapa)((.+?)$)", "Yhe Tsongkhapa $2, g");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^yoga de la bendici\u00F3n de los H\u00E9roes y Hero\u00EDnas)((.+?)$)", "yoga de la bendici\u00F3n de los H\u00E9roes y Hero\u00EDnas $2 (v\u00E9ase tambi\u00E9n mandala corporal)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^yoga de la bendición de los Héroes y Heroínas)((.+?)$)", "yoga de la bendición de los Héroes y Heroínas $2 (véase también mandala corporal)");
 
-replaceTextOnIndexLevel(IndexLevel01Roman, "(\^yoga de la gota)((.+?)$)", "yoga de la gota $2 (v\u00E9ase tambi\u00E9n fuego interno)");
+replaceTextOnIndexLevel(IndexLevel01Roman, "(\^yoga de la gota)((.+?)$)", "yoga de la gota $2 (véase también fuego interno)");
 
