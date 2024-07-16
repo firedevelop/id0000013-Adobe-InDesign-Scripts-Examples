@@ -1,0 +1,56 @@
+
+___________ DIFF NUMBER 1 ___________
+- REMOVE
+Universal Declaration of Human Rights Article 1 All human beings are born free and equal in dignity and rights.
+
++ ADD
+universal Declaration of human Right Article 1 All human beings are born free and equal in dignity and.
+
++- CHANGES
+[***Universal***] [***universal***] Declaration of [***Human***] [***human***] [***Rights***] [***Right***] Article 1 All human beings are born free and equal in dignity [***and***] [***and.***]
+
+
+___________ DIFF NUMBER 2 ___________
+- REMOVE
+Furthermore, no distinction shall be made on the basis of the political, jurisdictional or international status of the country or territory to which a person belongs, whether it be independent, trust, non-self-governing or under any other limitation of sovereignty.
+
++ ADD
+Furthermore, no distinction shall be made on the basis of the politicaljurisdictional or international status of the country or territory to which a person belongs, whether it be independent, trust, non-self-governing or under any other limitation of sovereignty.
+
++- CHANGES
+Furthermore, no distinction shall be made on the basis of the [***political,***] [***politicaljurisdictional***] [***jurisdictional***] [***or***] [***or***] [***international***] [***international***] [***status***] [***status***] [***of***] [***of***] [***the***] [***the***] [***country***] [***country***] [***or***] [***or***] [***territory***] [***territory***] [***to***] [***to***] [***which***] [***which***] [***a***] [***a***] [***person***] [***person***] [***belongs,***] [***belongs,***] [***whether***] [***whether***] [***it***] [***it***] [***be***] [***be***] [***independent,***] [***independent,***] [***trust,***] [***trust,***] [***non-self-governing***] [***non-self-governing***] [***or***] [***or***] [***under***] [***under***] [***any***] [***any***] [***other***] [***other***] [***limitation***] [***limitation***] [***of***] [***of***] [***sovereignty.***]
+
+
+___________ DIFF NUMBER 3 ___________
+- REMOVE
+Article 3 Everyone has the right to life, liberty and security of person.
+
++ ADD
+Article x Everyone has the right to life, liberty and security of person.
+
++- CHANGES
+Article [***3***] [***x***] Everyone has the right to life, liberty and security of person.
+
+
+___________ DIFF NUMBER 4 ___________
+- REMOVE
+Article 4 No one shall be held in slavery or servitude; slavery and the slave trade shall be prohibited in all their forms.
+
++ ADD
+Article 4 No one be held in slavery or servitude; slavery and the slave trade shall be prohibited in all their forms.
+
++- CHANGES
+Article 4 No one [***shall***] [***be***] [***be***] [***held***] [***held***] [***in***] [***in***] [***slavery***] [***slavery***] [***or***] [***or***] [***servitude;***] [***servitude;***] [***slavery***] [***slavery***] [***and***] [***and***] [***the***] [***the***] [***slave***] [***slave***] [***trade***] [***trade***] [***shall***] [***shall***] [***be***] [***be***] [***prohibited***] [***prohibited***] [***in***] [***in***] [***all***] [***all***] [***their***] [***their***] [***forms.***]
+
+
+___________ DIFF NUMBER 5 ___________
+- REMOVE
+Article 5 No one shall be subjected to torture or to cruel, inhuman or degrading treatment or punishment.
+
++ ADD
+Article Noone shall be subjected to torture or to cruel, inhuman or degrading treatment or punishment.
+
++- CHANGES
+Article [***5***] [***Noone***] [***No***] [***shall***] [***one***] [***be***] [***shall***] [***subjected***] [***be***] [***to***] [***subjected***] [***torture***] [***to***] [***or***] [***torture***] [***to***] [***or***] [***cruel,***] [***to***] [***inhuman***] [***cruel,***] [***or***] [***inhuman***] [***degrading***] [***or***] [***treatment***] [***degrading***] [***or***] [***treatment***] [***punishment.***]
+
+Please review and update indi.txt accordingly.
