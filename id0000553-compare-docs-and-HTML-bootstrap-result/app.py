@@ -9,8 +9,8 @@ def preprocess_text(text):
     return text
 
 # Load the content of the two files
-file1_path = 'word.txt'
-file2_path = 'indi.txt'
+file1_path = 'old_text.txt'
+file2_path = 'new_text.txt'
 
 with open(file1_path, 'r', encoding='utf-8') as file1, open(file2_path, 'r', encoding='utf-8') as file2:
     file1_text = preprocess_text(file1.read())
@@ -55,7 +55,7 @@ for line1, line2 in zip(file1_lines, file2_lines):
         diff_number += 1
 
 # Add footer for clarity
-footer = "\nPlease review and update indi.txt accordingly."
+footer = "\nPlease review and update new_text.txt accordingly."
 
 # Write differences to a text file
 output_file = 'differences.txt'
